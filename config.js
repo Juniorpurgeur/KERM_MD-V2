@@ -2,13 +2,13 @@
 const fs = require("fs-extra");
 if (fs.existsSync(".env"))
   require("dotenv").config({ path: __dirname + "/.env" });
-global.audio = "";
-global.video = "";
+global.audio = "null";
+global.video = "null";
 global.port = process.env.PORT;
-global.appUrl = process.env.APP_URL || "";
+global.appUrl = process.env.APP_URL || "null";
 global.email = "Kermd237@gmail.com";
 global.location = "Douala, Cameroun";
-global.mongodb = process.env.MONGODB_URI || "";
+global.mongodb = process.env.MONGODB_URI || "null";
 global.allowJids = process.env.ALLOW_JID || "null";
 global.blockJids = process.env.BLOCK_JID || "null";
 global.DATABASE_URL = process.env.DATABASE_URL || "postgresql://don_junior_user:5NwRHqgbaQw2IwyK60hcO66riSzZoLtV@dpg-cqncdetsvqrc73fmghu0-a.oregon-postgres.render.com/don_junior";
@@ -31,11 +31,11 @@ global.userImages = process.env.USER_IMAGES || "https://telegra.ph/file/40ffc2a2
 global.waPresence = process.env.WAPRESENCE || "available";
 global.readcmds = process.env.READ_COMMAND || "true";
 global.readmessage = process.env.READ_MESSAGE || "false";
-global.readmessagefrom = process.env.READ_MESSAGE_FROM || "";
+global.readmessagefrom = process.env.READ_MESSAGE_FROM || "false";
 global.read_status = process.env.AUTO_READ_STATUS || "false";
 global.save_status = process.env.AUTO_SAVE_STATUS || "false";
-global.save_status_from = process.env.SAVE_STATUS_FROM || "";
-global.read_status_from = process.env.READ_STATUS_FROM || "";
+global.save_status_from = process.env.SAVE_STATUS_FROM || "false";
+global.read_status_from = process.env.READ_STATUS_FROM || "false";
 
 global.api_smd = "https://api-smd-1.vercel.app";
 global.scan = "https://kerm-v2-session.onrender.com/wasiqr";
@@ -53,12 +53,12 @@ module.exports = {
   packname: process.env.PACK_NAME || "Kerm-MD-V2",
   botname: process.env.BOT_NAME || "ᵏᵍ┘𝙺𝙴𝚁𝙼_𝙼𝙳_𝚅𝟸𖤐",
   ownername: process.env.OWNER_NAME || "☞⌜𝐃𝚯𝚴 𝐉𝐔𝚴𝚰𝚯𝚪⌝☜",
-  errorChat: process.env.ERROR_CHAT || "",
+  errorChat: process.env.ERROR_CHAT || "false",
   KOYEB_API: process.env.KOYEB_API || "false",
-  REMOVE_BG_KEY: process.env.REMOVE_BG_KEY || "",
-  OPENAI_API_KEY: process.env.OPENAI_API_KEY || "",
-  HEROKU_API_KEY: process.env.HEROKU_API_KEY || "",
-  HEROKU_APP_NAME: process.env.HEROKU_APP_NAME || "",
+  REMOVE_BG_KEY: process.env.REMOVE_BG_KEY || "null",
+  OPENAI_API_KEY: process.env.OPENAI_API_KEY || "null",
+  HEROKU_API_KEY: process.env.HEROKU_API_KEY || "null",
+  HEROKU_APP_NAME: process.env.HEROKU_APP_NAME || "null",
   antilink_values: process.env.ANTILINK_VALUES || "all",
   HEROKU: process.env.HEROKU_APP_NAME && process.env.HEROKU_API_KEY,
   aitts_Voice_Id: process.env.AITTS_ID || "37",
